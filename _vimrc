@@ -3,6 +3,8 @@ filetype plugin indent on
 syntax enable
 syntax on
 
+execute pathogen#infect()
+
 set fenc=utf-8
 set encoding=utf-8
 set ts=4
@@ -14,4 +16,6 @@ set nu
 autocmd FileType python set expandtab
 autocmd FileType python retab
 
-autocmd BufNewFile *.py 0r ~/.vim/templates/template.py
+"autocmd BufNewFile *.py 0r ~/.vim/templates/template.py
+let g:username ="Yang Junyong"
+let g:email="yanunon@gmail.com"
