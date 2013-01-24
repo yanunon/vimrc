@@ -1,0 +1,1 @@
+/home/kite/data/google/go/misc/vim/plugin/godoc.vim

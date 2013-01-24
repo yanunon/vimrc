@@ -1,0 +1,1 @@
+/home/kite/data/google/go/misc/vim/ftplugin/go/fmt.vim
