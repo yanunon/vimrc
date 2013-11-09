@@ -1,1 +1,0 @@
-/home/kite/data/google/go/misc/vim/indent/go.vim

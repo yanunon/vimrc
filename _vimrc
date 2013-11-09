@@ -1,9 +1,16 @@
-set rtp+=$GOROOT/misc/vim
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'aperezdc/vim-template'
+Bundle 'davidhalter/jedi-vim'
+
 filetype plugin indent on
 syntax enable
 syntax on
 
-execute pathogen#infect()
 
 set fenc=utf-8
 set encoding=utf-8
