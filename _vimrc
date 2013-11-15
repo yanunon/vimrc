@@ -1,13 +1,21 @@
 set nocompatible
 filetype off
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'aperezdc/vim-template'
-Bundle 'davidhalter/jedi-vim'
+"for python
+Bundle 'davidhalter/jedi-vim' 
+"for go
+Bundle 'Blackrush/vim-gocode'
+"for cpp
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
+
+filetype plugin on
+
 syntax enable
 syntax on
 
@@ -23,6 +31,12 @@ set nu
 autocmd FileType python set expandtab
 autocmd FileType python retab
 
-"autocmd BufNewFile *.py 0r ~/.vim/templates/template.py
 let g:username ="Yang Junyong"
 let g:email="yanunon@gmail.com"
+
+let g:ycm_global_ycm_extra_conf="~/.vim/_ycm_extra_conf.py"
+let g:syntastic_check_on_open=1
+
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
