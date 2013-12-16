@@ -4,11 +4,17 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'aperezdc/vim-template'
-"for python
+"Python
 Bundle 'davidhalter/jedi-vim' 
-"for go
+"Go
+"install gocode: go get github.com/nsf/gocode
 Bundle 'Blackrush/vim-gocode'
-"for cpp
+"install godef: go get code.google.com/p/rog-go/exp/cmd/godef
+Bundle 'dgryski/vim-godef'
+"install goimports: go get github.com/bradfitz/goimports
+Bundle 'cespare/vim-golang'
+
+"C++
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 
@@ -28,8 +34,15 @@ set autoindent
 set cindent
 set nu
 
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
 autocmd FileType python set expandtab
 autocmd FileType python retab
+
+autocmd BufWritePre *.go :Fmt
 
 let g:username ="Yang Junyong"
 let g:email="yanunon@gmail.com"
