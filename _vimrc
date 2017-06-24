@@ -4,18 +4,28 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'aperezdc/vim-template'
+
 "Python
 Bundle 'davidhalter/jedi-vim' 
+
 "Go
 "install gocode: go get github.com/nsf/gocode
-Bundle 'Blackrush/vim-gocode'
+"Bundle 'Blackrush/vim-gocode'
 "install godef: go get code.google.com/p/rog-go/exp/cmd/godef
-Bundle 'dgryski/vim-godef'
+"Bundle 'dgryski/vim-godef'
 "install goimports: go get github.com/bradfitz/goimports
-Bundle 'cespare/vim-golang'
+"Bundle 'cespare/vim-golang'
+Bundle 'fatih/vim-go'
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+
+
 
 "C++
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
+
 Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
@@ -33,6 +43,7 @@ set sw=4
 set autoindent
 set cindent
 set nu
+set autowrite
 
 set undodir=~/.vim/undodir
 set undofile
@@ -52,4 +63,4 @@ let g:syntastic_check_on_open=1
 
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
+set backspace=indent,eol,start
